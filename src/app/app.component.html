@@ -1,4 +1,11 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>Bücher</h1>
+
+<div *ngFor="let book of books">
+  <h3>{{ book.title }} <small>(Sterne {{ book.rating }})</small></h3>
+  <h4>{{ book.subtitle}}</h4>
+  <p>{{ book.description }}</p>
+  <div class="text-muted">
+    <strong>Autoren </strong>
+    <p>{{ book.authorTeam }}</p>
+  </div>
+</div>
